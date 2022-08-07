@@ -5,7 +5,7 @@ const journeyArr = [
     period: "Jul'21 - Continue",
     designation: "Fullstack Developer at Daydreamsoft LLP",
     description: [
-      "Work collaboratively with clients and in-house agency teams to provide rapid, robust and client-acclaimed front-end and back-end web development optimizing user experience.",
+      "Working collaboratively with clients and in-house agency teams to provide rapid, robust and client-acclaimed front-end and back-end web development optimizing user experience.",
     ],
   },
   {
@@ -29,7 +29,7 @@ const journeyArr = [
     period: "Sep'14 - Jan'20",
     designation: "Civil Engineer",
     description: [
-      "After completing my bachelor degree in Civil Engineering, I almost worked for 6 years in this field!",
+      "After completing my bachelor degree in Civil Engineering, I almost worked for 6 years in the field!",
     ],
   },
 ];
