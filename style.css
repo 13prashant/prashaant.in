@@ -103,6 +103,10 @@ p {
 }
 
 /* ==================== Technologies ==================== */
+#technologies .container {
+  padding-top: 3.125rem;
+}
+
 .technologies {
   display: flex;
   justify-content: flex-start;
@@ -110,25 +114,17 @@ p {
 }
 
 .technologies:not(:last-child) {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
-.technologies-wrapper h4 {
-  margin-bottom: 10px;
+.technologies-wrapper p {
+  margin-bottom: 6.25rem;
 }
 
 .technologies img {
   width: 60px;
   transition: all ease-in-out var(--transition);
   margin: 10px;
-}
-
-/* .technologies img:not(:last-child) {
-    margin: 20px;
-  } */
-
-.technologies svg:hover {
-  filter: drop-shadow(-12px 5px 22px var(--color-accent));
 }
 
 /* ==================== Journey ==================== */
