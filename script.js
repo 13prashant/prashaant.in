@@ -1,7 +1,7 @@
 // Journey===============================================================
 const journeyArr = [
   {
-    image: "./assets/developer-team.svg",
+    image: "./assets/journey/developer-team.svg",
     period: "Jul'21 - Continue",
     designation: "Fullstack Developer at Daydreamsoft LLP",
     description: [
@@ -9,7 +9,7 @@ const journeyArr = [
     ],
   },
   {
-    image: "./assets/developer.svg",
+    image: "./assets/journey/developer.svg",
     period: "Jun'20 - Jul'21",
     designation: "Freelancer Web Developer",
     description: [
@@ -17,7 +17,7 @@ const journeyArr = [
     ],
   },
   {
-    image: "./assets/learning.svg",
+    image: "./assets/journey/learning.svg",
     period: "Jan'20 - Jun'21",
     designation: "Learner",
     description: [
@@ -25,7 +25,7 @@ const journeyArr = [
     ],
   },
   {
-    image: "./assets/construction.svg",
+    image: "./assets/journey/construction.svg",
     period: "Sep'14 - Jan'20",
     designation: "Civil Engineer",
     description: [

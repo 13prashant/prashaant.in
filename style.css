@@ -110,16 +110,27 @@ p {
 /* ==================== Technologies ==================== */
 .technologies {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
-.technologies svg {
-  width: 80px;
-  height: 80px;
-  margin: 10px;
-  transition: all ease-in-out var(--transition);
+.technologies:not(:last-child) {
+  margin-bottom: 50px;
 }
+
+.technologies-wrapper h4 {
+  margin-bottom: 10px;
+}
+
+.technologies img {
+  width: 60px;
+  transition: all ease-in-out var(--transition);
+  margin: 10px;
+}
+
+/* .technologies img:not(:last-child) {
+    margin: 20px;
+  } */
 
 .technologies svg:hover {
   filter: drop-shadow(-12px 5px 22px var(--color-accent));
