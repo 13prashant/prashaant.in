@@ -123,10 +123,31 @@ p {
   margin-bottom: 6.25rem;
 }
 
+.technologies div {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
 .technologies img {
   width: 60px;
   transition: all ease-in-out var(--transition);
   margin: 10px;
+}
+
+.technologies label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #040d21;
+  padding: 0.2rem;
+  transition: all ease-in-out var(--transition);
+  display: none;
+  z-index: 99;
+}
+
+.technologies label.show-tooltip {
+  display: block;
 }
 
 /* ==================== Journey ==================== */

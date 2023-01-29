@@ -62,3 +62,24 @@ document.getElementById("journey-single").innerHTML = journeyArr
     `
   )
   .join("");
+
+  // Display technology label on hover
+  const technologies = document.querySelectorAll('.technologies')
+
+  technologies.forEach(technology => {
+    const techDivs = technology.getElementsByTagName('div') 
+    
+    for(let i = 0; i < techDivs.length; i++) {
+      const currentTech = techDivs[i]
+      const currentImage = currentTech.getElementsByTagName('img')[0]
+      const currentLabel = currentTech.getElementsByTagName('label')[0]
+      
+      currentImage.addEventListener('mouseover', () => {
+        currentLabel.classList.add('show-tooltip')
+      })
+      currentImage.addEventListener('mouseleave', () => {
+        currentLabel.classList.remove('show-tooltip')
+      })
+    }
+  })
+ 
