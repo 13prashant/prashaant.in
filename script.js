@@ -5,7 +5,7 @@ const journeyArr = [
     period: "Jul'21 - Continue",
     designation: "Fullstack Developer at Daydreamsoft LLP",
     description: [
-      "Working collaboratively with clients and in-house agency teams to provide rapid, robust and client-acclaimed front-end and back-end web development optimizing user experience.",
+      "With a focus on providing a seamless user experience, I am currently working collaboratively with clients and in-house agency teams to deliver rapid and robust web development solutions. My commitment to delivering high-quality results has been recognized and praised, making me a sought-after web developer.",
     ],
   },
   {
@@ -13,7 +13,7 @@ const journeyArr = [
     period: "Jun'20 - Jul'21",
     designation: "Freelancer Web Developer",
     description: [
-      "Continuing the journey of learning, I started out as a Freelancer, tied up with local businesses & helped them out to get their businesses online.",
+      "Starting out as a freelancer, I connected with local businesses and provided them with the resources they needed to establish an online presence. My work included creating custom web applications that were tailored to meet the unique needs of each business.",
     ],
   },
   {
@@ -21,7 +21,7 @@ const journeyArr = [
     period: "Jan'20 - Jun'21",
     designation: "Learner",
     description: [
-      "As I have been always passionated about computers, I started exploring & learning web development.",
+      "However, my passion for computers led me to explore the world of web development. Through self-learning and exploration, I developed a strong understanding of the technologies and tools used in web development.",
     ],
   },
   {
@@ -29,7 +29,7 @@ const journeyArr = [
     period: "Sep'14 - Jan'20",
     designation: "Civil Engineer",
     description: [
-      "After completing my bachelor degree in Civil Engineering, I almost worked for 6 years in the field!",
+      "After obtaining my Bachelor's degree in Civil Engineering, I have spent nearly 6 years honing my skills in the field.",
     ],
   },
 ];
