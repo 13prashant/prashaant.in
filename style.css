@@ -109,6 +109,10 @@ p {
   padding-top: 3.125rem;
 }
 
+.walk-section {
+  position: relative;
+}
+
 .technologies {
   display: flex;
   justify-content: flex-start;
@@ -148,6 +152,18 @@ p {
 
 .technologies label.show-tooltip {
   display: block;
+}
+
+.walk {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -1px;
+  animation: walk 15s infinite normal;
+}
+
+@keyframes walk {
+  from {margin-left: -5%;}
+  to {margin-left: 100%;}
 }
 
 /* ==================== Journey ==================== */
@@ -206,6 +222,10 @@ p {
     margin: 0 auto;
     padding: 6.25rem 3.125rem;
   }
+
+  .walk {
+    animation: walk 40s infinite normal;
+  }
 }
 
 @media screen and (min-width: 999px) {
@@ -233,5 +253,9 @@ p {
 
   .journey-title img {
     display: none;
+  }
+
+  .walk {
+    animation: walk 60s infinite normal;
   }
 }
