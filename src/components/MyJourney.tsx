@@ -22,9 +22,9 @@ export default function MyJourney() {
                 height={350}
                 alt={journey.designation}
               />
-              <div className="flex flex-col gap-3 justify-center">
-                <div className={`flex justify-between`}>
-                  <div>
+              <div className={`${journey.id % 2 === 0 ? '' : 'md:text-right'} flex flex-col gap-3 justify-center`}>
+                <div className="flex justify-between">
+                  <div className="md:flex-1">
                     <h4 className="text-pra-text-500 text-lg font-bold">
                       {journey.period}
                     </h4>
