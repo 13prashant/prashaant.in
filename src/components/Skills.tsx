@@ -2,6 +2,22 @@ import Image from "next/image";
 import Title from "./common/Title";
 import { programmingSkills, developmentTools } from "./helpers";
 
+interface Skill {
+  name: string;
+  image: string;
+}
+
+function Skill({ name, image }: Skill) {
+  return (
+    <div className="relative group flex">
+      <Image src={image} width={60} height={60} alt={name} />
+      <span className="hidden bg-pra-universe text-pra-text-400 absolute -top-10 -right-5 z-50 group-hover:block duration-300">
+        {name}
+      </span>
+    </div>
+  );
+}
+
 export default function Skills() {
   return (
     <section className="bg-pra-main-500">
@@ -21,13 +37,7 @@ export default function Skills() {
         </h4>
         <div className="flex gap-5 flex-wrap">
           {programmingSkills.map((skill) => (
-            <Image
-              key={skill.id}
-              src={skill.image}
-              width={60}
-              height={60}
-              alt={skill.name}
-            />
+            <Skill key={skill.id} name={skill.name} image={skill.image} />
           ))}
         </div>
 
@@ -36,13 +46,7 @@ export default function Skills() {
         </h4>
         <div className="flex gap-5 flex-wrap">
           {developmentTools.map((skill) => (
-            <Image
-              key={skill.id}
-              src={skill.image}
-              width={60}
-              height={60}
-              alt={skill.name}
-            />
+            <Skill key={skill.id} name={skill.name} image={skill.image} />
           ))}
         </div>
       </div>

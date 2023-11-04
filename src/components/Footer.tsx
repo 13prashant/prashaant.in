@@ -7,11 +7,17 @@ export default function Footer() {
       <div className="pra-container">
         <Title text="CONTACT" />
         <h4 className="text-pra-text-500 font-bold">Email</h4>
-        <a className="text-pra-text-400" href={`mailto:${EMAIL_ADDRESS}`}>
+        <a
+          className="text-pra-text-400 hover:text-pra-accent duration-300"
+          href={`mailto:${EMAIL_ADDRESS}`}
+        >
           {EMAIL_ADDRESS}
         </a>
         <h4 className="text-pra-text-500 font-bold mt-3">Phone</h4>
-        <a className="text-pra-text-400" href={`tel:${PHONE_NUMBER}`}>
+        <a
+          className="text-pra-text-400 hover:text-pra-accent duration-300"
+          href={`tel:${PHONE_NUMBER}`}
+        >
           {PHONE_NUMBER}
         </a>
       </div>

@@ -1,5 +1,6 @@
 import Title from "./common/Title";
-import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { socialAccounts } from "./helpers";
 
 interface SocialIcons {
@@ -8,7 +9,7 @@ interface SocialIcons {
 
 const socialIcons: SocialIcons = {
   linkedin: <FaLinkedin />,
-  twitter: <FaTwitter />,
+  twitter: <FaXTwitter />,
   github: <FaGithub />,
 };
 
@@ -16,7 +17,7 @@ export default function Header() {
   return (
     <header className="bg-pra-universe">
       <div className="pra-container relative">
-        <Title text="Fullstack Engineer" />
+        <Title text="Full-Stack Engineer" />
         <h1 className="text-xl md:text-2xl text-pra-text-400 font-extrabold">
           hi,👋 I'm Prashant.
         </h1>
