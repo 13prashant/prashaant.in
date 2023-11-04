@@ -23,7 +23,7 @@ export default function Skills() {
     <section className="bg-pra-main-500">
       <div className="pra-container">
         <p className="text-pra-text-500 text-lg mb-24">
-          As a Full Stack Developer, I specialize in utilizing JavaScript
+          As a Full-Stack Engineer, I specialize in utilizing JavaScript
           Technologies to build complete web applications, including MongoDB,
           Express, React, and Node.js. My expertise covers the entire stack,
           from the backend API systems to the front-end user interfaces. With my

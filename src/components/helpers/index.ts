@@ -91,7 +91,7 @@ export const myJourney = [
     id: 0,
     image: "/assets/journey/developer-team.svg",
     period: "Jul'21 - Continue",
-    designation: "Fullstack Developer at Daydreamsoft LLP",
+    designation: "Full-Stack Web Developer at Daydreamsoft LLP",
     description:
       "With a focus on providing a seamless user experience, I am currently working collaboratively with clients and in-house agency teams to deliver rapid and robust web development solutions. My commitment to delivering high-quality results has been recognized and praised, making me a sought-after web developer.",
   },
