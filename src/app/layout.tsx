@@ -7,8 +7,8 @@ import Footer from "@/components/Footer";
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Prashant Patel | Fullstack Engineer",
-  description: "Fullstack Engineer",
+  title: "Prashant Patel | Full-Stack Engineer",
+  description: "Full-Stack Engineer",
 };
 
 export default function RootLayout({
