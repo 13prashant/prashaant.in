@@ -183,7 +183,7 @@ export const projects = [
   {
     id: 4,
     name: "Card Trika",
-    description: "A digitla visiting card application",
+    description: "A digital visiting card application",
     techStack: [
       "Next.js",
       "Typescript",
@@ -193,8 +193,8 @@ export const projects = [
       "Stripe",
     ],
     image: "/assets/projects/cardtrika.png",
-    link: "https://cardtrika-landing-page.vercel.app/",
-    status: "In Progress",
+    link: "https://cardtrika.com/",
+    status: "Completed",
     themeColor: "#050b5e",
   },
 ];
