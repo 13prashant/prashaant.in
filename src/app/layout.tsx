@@ -1,15 +1,12 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { seoMetadata } from "@/utils/seo";
 
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Prashant Patel | Full-Stack Engineer",
-  description: "Full-Stack Engineer",
-};
+export const metadata = seoMetadata;
 
 export default function RootLayout({
   children,
