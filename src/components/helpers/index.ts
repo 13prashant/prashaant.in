@@ -1,4 +1,4 @@
-import { GITHUB_LINK, LINKEDIN_LINK, TWITTER_LINK } from "@/utils/constants";
+import { GITHUB_LINK, LINKEDIN_LINK } from "@/utils/constants";
 
 export const programmingSkills = [
   {
@@ -86,41 +86,6 @@ export const developmentTools = [
   },
 ];
 
-export const myJourney = [
-  {
-    id: 0,
-    image: "/assets/journey/developer-team.svg",
-    period: "Jul'21 - Continue",
-    designation: "Full-Stack Web Developer at Daydreamsoft LLP",
-    description:
-      "With a focus on providing a seamless user experience, I am currently working collaboratively with clients and in-house agency teams to deliver rapid and robust web development solutions. My commitment to delivering high-quality results has been recognized and praised, making me a sought-after web developer.",
-  },
-  {
-    id: 1,
-    image: "/assets/journey/developer.svg",
-    period: "Jun'20 - Jul'21",
-    designation: "Freelancer Web Developer",
-    description:
-      "Starting out as a freelancer, I connected with local businesses and provided them with the resources they needed to establish an online presence. My work included creating custom web applications that were tailored to meet the unique needs of each business.",
-  },
-  {
-    id: 2,
-    image: "/assets/journey/learning.svg",
-    period: "Jan'20 - Jun'21",
-    designation: "Learner",
-    description:
-      "However, my passion for computers led me to explore the world of web development. Through self-learning and exploration, I developed a strong understanding of the technologies and tools used in web development.",
-  },
-  {
-    id: 3,
-    image: "/assets/journey/construction.svg",
-    period: "Sep'14 - Jan'20",
-    designation: "Civil Engineer",
-    description:
-      "After obtaining my Bachelor's degree in Civil Engineering, I have spent nearly 6 years honing my skills in the field.",
-  },
-];
-
 export const socialAccounts = [
   {
     id: 0,
@@ -129,11 +94,6 @@ export const socialAccounts = [
   },
   {
     id: 1,
-    name: "Twitter",
-    link: TWITTER_LINK,
-  },
-  {
-    id: 2,
     name: "Github",
     link: GITHUB_LINK,
   },
@@ -150,18 +110,8 @@ export const projects = [
     status: "Completed",
     themeColor: "#2e3b95",
   },
-  // {
-  //   id: 1,
-  //   name: "Hriday Sur",
-  //   description: "Portfolio website for Hriday Sur",
-  //   techStack: ["HTML", "CSS"],
-  //   image: "/assets/projects/hriday.png",
-  //   link: "https://hridaysur.github.io/",
-  //   status: "Completed",
-  //   themeColor: "#5bcb8b",
-  // },
   {
-    id: 2,
+    id: 1,
     name: "Songire",
     description: "Website for an SEO firm",
     techStack: ["Next.js"],
@@ -171,7 +121,7 @@ export const projects = [
     themeColor: "#ef4c1c",
   },
   {
-    id: 3,
+    id: 2,
     name: "preme.in",
     description: "Portfolio website for Prem Dave",
     techStack: ["Next.js", "Typescript", "Tailwind CSS"],
@@ -181,7 +131,7 @@ export const projects = [
     themeColor: "#facc15",
   },
   {
-    id: 4,
+    id: 3,
     name: "Card Trika",
     description: "A digital visiting card application",
     techStack: [

@@ -23,7 +23,7 @@ export default function Project({
 }: Props) {
   return (
     <div className="relative group">
-      <div className="flex gap-3 bg-pra-main-400 w-80 h-96 relative z-10">
+      <div className="flex gap-3 bg-pra-main-500 w-80 h-96 relative z-10">
         <div className="relative w-full h-full">
           <Image className="object-cover bg-top" src={image} fill alt={name} />
         </div>

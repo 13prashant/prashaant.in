@@ -4,7 +4,7 @@ import { projects } from "./helpers";
 
 export default function Projects() {
   return (
-    <section className="bg-pra-main-500">
+    <section className="bg-pra-main-400">
       <div className="pra-container">
         <Title text="PROJECTS" className="mb-12" />
         <div className="flex flex-wrap justify-center lg:justify-start gap-10 duration-300">

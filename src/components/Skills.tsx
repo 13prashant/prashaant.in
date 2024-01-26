@@ -22,6 +22,9 @@ export default function Skills() {
   return (
     <section className="bg-pra-main-500">
       <div className="pra-container">
+        <h1 className="max-w-90 text-7xl text-pra-text-400 font-semibold mb-5 md:mb-10 duration-300">
+          building things for <span className="text-pra-accent">web</span>.
+        </h1>
         <p className="text-pra-text-500 text-lg mb-24">
           As a Full-Stack Engineer, I specialize in utilizing JavaScript
           Technologies to build complete web applications, including MongoDB,
@@ -30,6 +33,7 @@ export default function Skills() {
           experience, I have a proven ability to design and develop
           high-quality, user-friendly, and scalable web applications.
         </p>
+
         <Title text="SKILLS" />
 
         <h4 className="text-pra-text-400 font-semibold text-lg mt-10 mb-5">
