@@ -147,4 +147,14 @@ export const projects = [
     status: "Completed",
     themeColor: "#050b5e",
   },
+  {
+    id: 4,
+    name: "Digim8",
+    description: "Your Ai Digital Mechanic for Smarter EV Care",
+    techStack: ["Next.js", "Typescript", "Tailwind CSS"],
+    image: "/assets/projects/digim8.png",
+    link: "https://www.digim8.online/",
+    status: "In Progress",
+    themeColor: "#ff44ec",
+  },
 ];

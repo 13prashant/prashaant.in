@@ -16,6 +16,10 @@ module.exports = {
         "pra-text-400": "#ffffff",
         "pra-universe": "#040d21",
       },
+      backgroundImage: {
+        "pra-gradient":
+          "linear-gradient(116.23deg, #ff44ec 0%, #5bcb8b 101.42%)",
+      },
     },
   },
   plugins: [],

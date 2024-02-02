@@ -7,7 +7,7 @@ export default function Projects() {
     <section className="bg-pra-main-400">
       <div className="pra-container">
         <Title text="PROJECTS" className="mb-12" />
-        <div className="flex flex-wrap justify-center lg:justify-start gap-10 duration-300">
+        <div className="flex flex-wrap justify-center lg:justify-start gap-9 duration-300">
           {projects
             .sort((a, b) => b.id - a.id)
             .map((project) => (

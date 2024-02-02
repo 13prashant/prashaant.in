@@ -22,10 +22,21 @@ export default function Project({
   themeColor,
 }: Props) {
   return (
-    <div className="relative group">
+    <div
+      style={{
+        backgroundImage: `linear-gradient(36.23deg, ${themeColor} 0%, #5bcb8b 101.42%)`,
+      }}
+      className="relative group p-[0.7px]"
+    >
       <div className="flex gap-3 bg-pra-main-500 w-80 h-96 relative z-10">
         <div className="relative w-full h-full">
-          <Image className="object-cover bg-top" src={image} fill alt={name} />
+          <Image
+            className="object-cover bg-top"
+            src={image}
+            fill
+            alt={name}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
         <div className="flex flex-col justify-between items-end p-3 pl-0">
           <div className="flex flex-col gap-2">
@@ -52,7 +63,7 @@ export default function Project({
         {status !== "Completed" && (
           <span
             style={{
-              backgroundColor: themeColor,
+              background: themeColor,
             }}
             className="text-pra-text-400 px-2 py-1 absolute left-4 -top-4 -z-10 group-hover:-top-7 duration-300"
           >
