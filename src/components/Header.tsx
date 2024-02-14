@@ -12,6 +12,8 @@ const socialIcons: SocialIcons = {
 };
 
 export default function Header() {
+  console.log(process.env.NEXT_PUBLIC_NAME, process.env.NODE_ENV, "<-----");
+  
   return (
     <header className="bg-pra-universe">
       <div className="pra-container flex justify-between">
