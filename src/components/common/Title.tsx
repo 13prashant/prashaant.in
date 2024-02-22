@@ -1,3 +1,5 @@
+import { cn } from "@/utils/cn";
+
 interface Props {
   text: string;
   className?: string;
@@ -5,7 +7,9 @@ interface Props {
 
 export default function Title({ text, className }: Props) {
   return (
-    <h3 className={`${className} bg-pra-accent font-bold w-fit mb-5 md:mb-10`}>
+    <h3
+      className={cn("bg-pra-accent font-bold w-fit mb-5 md:mb-10", className)}
+    >
       {text}
     </h3>
   );
