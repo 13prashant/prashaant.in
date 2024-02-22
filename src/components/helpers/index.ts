@@ -157,4 +157,15 @@ export const projects = [
     status: "In Progress",
     themeColor: "#ff44ec",
   },
+  {
+    id: 5,
+    name: "Clipyfy",
+    description:
+      "Focus on ideas and not editing. Discover the magic of creating dynamic videos automatically.",
+    techStack: ["Next.js", "Typescript", "Tailwind CSS", "Firebase"],
+    image: "/assets/projects/clipyfy.png",
+    link: "https://www.cinemachines.com/",
+    status: "In Progress",
+    themeColor: "#0a5ff9",
+  },
 ];
