@@ -28,6 +28,7 @@ export default function Header() {
                 className="md:text-2xl text-pra-text-400 hover:text-pra-accent duration-300"
                 href={account.link}
                 target="_blank"
+                aria-label={`Visit Prashant's ${account.name} page`}
               >
                 {socialIcons[account.name.toLowerCase()]}
               </a>

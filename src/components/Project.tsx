@@ -50,7 +50,7 @@ export default function Project({
             ))}
           </div>
           {link && (
-            <Link href={link} target="_blank">
+            <Link href={link} target="_blank" aria-label={`Visit ${name}`}>
               <AiOutlineArrowRight
                 className="text-3xl hover:scale-125 duration-300"
                 style={{
