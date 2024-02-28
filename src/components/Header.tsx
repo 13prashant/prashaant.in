@@ -1,5 +1,6 @@
 import Title from "./common/Title";
-import { Meteors } from "./ui/meteors";
+import { Spotlight } from "./ui/Spotlight";
+import { Meteors } from "./ui/Meteors";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { socialAccounts } from "./helpers";
 
@@ -36,7 +37,8 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <Meteors number={7} />
+        <Spotlight className="top-0 left-0" fill="steelblue" />
+        <Meteors className="hidden lg:block" number={7} />
       </div>
     </header>
   );
