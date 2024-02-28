@@ -1,4 +1,5 @@
 import Title from "./common/Title";
+import { Meteors } from "./ui/meteors";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { socialAccounts } from "./helpers";
 
@@ -14,7 +15,7 @@ const socialIcons: SocialIcons = {
 export default function Header() {
   return (
     <header className="bg-pra-universe">
-      <div className="pra-container flex justify-between">
+      <div className="pra-container flex justify-between relative">
         <div>
           <Title text="Full-Stack Engineer" />
           <h1 className="text-xl md:text-2xl text-pra-text-400 font-extrabold duration-300">
@@ -35,6 +36,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
+        <Meteors number={7} />
       </div>
     </header>
   );
