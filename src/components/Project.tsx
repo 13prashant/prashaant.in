@@ -36,6 +36,7 @@ export default function Project({
             fill
             alt={name}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            title={name}
           />
         </div>
         <div className="flex flex-col justify-between items-end p-3 pl-0">
@@ -50,7 +51,12 @@ export default function Project({
             ))}
           </div>
           {link && (
-            <Link href={link} target="_blank" aria-label={`Visit ${name}`}>
+            <Link
+              href={link}
+              target="_blank"
+              aria-label={`Visit ${name}`}
+              title={`${name} live website`}
+            >
               <AiOutlineArrowRight
                 className="text-3xl hover:scale-125 duration-300"
                 style={{

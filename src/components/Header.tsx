@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Title from "./common/Title";
 import { Spotlight } from "./ui/Spotlight";
 import { Meteors } from "./ui/Meteors";
@@ -19,21 +20,22 @@ export default function Header() {
       <div className="pra-container flex justify-between relative">
         <div>
           <Title text="Full-Stack Engineer" />
-          <h1 className="text-xl md:text-2xl text-pra-text-400 font-extrabold duration-300">
+          <h2 className="text-xl md:text-2xl text-pra-text-400 font-extrabold duration-300">
             hi,👋 I'm Prashant,
-          </h1>
+          </h2>
         </div>
         <ul className="flex items-end gap-5 md:gap-10 duration-300">
           {socialAccounts.map((account) => (
-            <li>
-              <a
+            <li key={account.id}>
+              <Link
                 className="md:text-2xl text-pra-text-400 hover:text-pra-accent duration-300"
                 href={account.link}
                 target="_blank"
                 aria-label={`Visit Prashant's ${account.name} page`}
+                title={`Prashant's ${account.name} account`}
               >
                 {socialIcons[account.name.toLowerCase()]}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

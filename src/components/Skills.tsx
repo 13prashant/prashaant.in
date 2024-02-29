@@ -10,7 +10,7 @@ interface Skill {
 function Skill({ name, image }: Skill) {
   return (
     <div className="relative group flex">
-      <Image src={image} width={60} height={60} alt={name} />
+      <Image src={image} width={60} height={60} alt={name} title={name} />
       <span className="hidden bg-pra-universe text-pra-text-400 absolute -top-10 -right-5 z-50 group-hover:block duration-300">
         {name}
       </span>
