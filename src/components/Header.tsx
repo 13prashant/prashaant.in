@@ -23,6 +23,9 @@ export default function Header() {
           <h2 className="text-xl md:text-2xl text-pra-text-400 font-extrabold duration-300">
             hi,👋 I'm Prashant,
           </h2>
+          <p className="text-white text-sm mt-2 font-semibold">
+            speaking Gujarati, Hindi, English, Javascript
+          </p>
         </div>
         <ul className="flex items-end gap-5 md:gap-10 duration-300">
           {socialAccounts.map((account) => (

@@ -22,8 +22,8 @@ export default function Skills() {
   return (
     <section className="bg-pra-main-500">
       <div className="pra-container">
-        <h1 className="max-w-90 text-7xl text-pra-text-400 font-semibold mb-5 md:mb-10 duration-300">
-          building things for <span className="text-pra-accent">web</span>.
+        <h1 className="max-w-90 text-6xl text-pra-text-400 font-semibold mb-5 md:mb-10 duration-300">
+          & building things for <span className="text-pra-accent">web</span>.
         </h1>
         <p className="text-pra-text-500 text-lg mb-24">
           As a Full-Stack Engineer, I specialize in utilizing JavaScript
