@@ -25,13 +25,16 @@ export default function Skills() {
         <h1 className="max-w-90 text-6xl text-pra-text-400 font-semibold mb-5 md:mb-10 duration-300">
           & building things for <span className="text-pra-accent">web</span>.
         </h1>
-        <p className="text-pra-text-500 text-lg mb-24">
-          As a Full-Stack Engineer, I specialize in utilizing JavaScript
-          Technologies to build complete web applications, including MongoDB,
-          Express, React, and Node.js. My expertise covers the entire stack,
-          from the backend API systems to the front-end user interfaces. With my
-          experience, I have a proven ability to design and develop
-          high-quality, user-friendly, and scalable web applications.
+        <p className="text-pra-text-500 text-lg">
+          I help businesses and individuals create powerful, efficient, and
+          scalable web applications. <br /> From robust backend systems to
+          seamless, user-friendly interfaces, I handle every aspect of web
+          development. <br /> By collaborating with me, you'll get a
+          high-quality, tailored solution designed to meet your goals and grow
+          with your business.
+        </p>
+        <p className="text-pra-text-500 text-lg mb-24 mt-10">
+          Let’s build something impactful together!
         </p>
 
         <Title text="SKILLS" />
