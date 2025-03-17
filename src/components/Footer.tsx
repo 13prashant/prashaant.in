@@ -4,7 +4,7 @@ import { EMAIL_ADDRESS, PHONE_NUMBER } from "@/utils/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-pra-main-500">
+    <footer>
       <div className="pra-container">
         <Title text="CONTACT" />
         <h4 className="text-pra-text-500 font-bold">Email</h4>
