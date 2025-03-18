@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Title from "./common/Title";
 import { programmingSkills, developmentTools } from "./helpers";
+import { Tooltip } from "./ui/Tooltip";
 
 interface Skill {
   name: string;
@@ -9,12 +10,9 @@ interface Skill {
 
 function Skill({ name, image }: Skill) {
   return (
-    <div className="relative group flex">
+    <Tooltip text={name}>
       <Image src={image} width={60} height={60} alt={name} title={name} />
-      <span className="hidden bg-pra-universe text-pra-text-400 absolute -top-10 -right-5 z-50 group-hover:block duration-300">
-        {name}
-      </span>
-    </div>
+    </Tooltip>
   );
 }
 
@@ -34,7 +32,7 @@ export default function Skills() {
           with your business.
         </p>
         <p className="text-pra-text-500 text-lg mb-24 mt-10">
-          Let’s build something impactful together!
+          Let&apos;s build something impactful together!
         </p>
 
         <Title text="SKILLS" />
