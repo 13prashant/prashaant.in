@@ -3,6 +3,8 @@ import Title from "./common/Title";
 import { programmingSkills, developmentTools } from "./helpers";
 import { Tooltip } from "./ui/Tooltip";
 import SocialLinks from "./common/SocialLinks";
+import Link from "next/link";
+import { MEETING_LINK } from "@/utils/constants";
 
 interface Skill {
   name: string;
@@ -33,9 +35,11 @@ export default function Skills() {
           high-quality, tailored solution designed to meet your goals and grow
           with your business.
         </p>
-        <p className="text-pra-text-500 text-lg mb-24 mt-10">
-          Let&apos;s build something impactful together!
-        </p>
+        <Link href={MEETING_LINK} target="_blank">
+          <p className="text-pra-text-500 text-lg !mb-24 mt-10 underline hover:text-pra-accent duration-300">
+            Let&apos;s build something impactful together!
+          </p>
+        </Link>
 
         <Title text="SKILLS" />
 

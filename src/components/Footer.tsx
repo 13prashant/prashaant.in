@@ -1,28 +1,32 @@
 import Link from "next/link";
-import Title from "./common/Title";
-import { EMAIL_ADDRESS, PHONE_NUMBER } from "@/utils/constants";
+import { MEETING_LINK, WHATSAPP_LINK } from "@/utils/constants";
+import { FaCalendar, FaPhone } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer>
       <div className="pra-container">
-        <Title text="CONTACT" />
-        <h4 className="text-pra-text-500 font-bold">Email</h4>
-        <Link
-          className="text-pra-text-400 hover:text-pra-accent duration-300"
-          href={`mailto:${EMAIL_ADDRESS}`}
-          title="Prashant's email address"
-        >
-          {EMAIL_ADDRESS}
-        </Link>
-        <h4 className="text-pra-text-500 font-bold mt-3">Phone</h4>
-        <Link
-          className="text-pra-text-400 hover:text-pra-accent duration-300"
-          href={`tel:${PHONE_NUMBER}`}
-          title="Prashant's mobile number"
-        >
-          {PHONE_NUMBER}
-        </Link>
+        <h2 className="text-xl md:text-2xl text-pra-text-400 font-extrabold duration-300 mb-8">
+          Have something in mind? I’d love to hear it.
+        </h2>
+        <div className="flex flex-col gap-2">
+          <Link
+            href={MEETING_LINK}
+            target="_blank"
+            className="flex items-center gap-2 text-pra-text-400 underline w-fit hover:text-pra-accent duration-300"
+          >
+            <FaCalendar className="" />
+            Book a Consultation
+          </Link>
+          <Link
+            href={WHATSAPP_LINK}
+            target="_blank"
+            className="flex items-center gap-2 text-pra-text-400 underline w-fit hover:text-pra-accent duration-300"
+          >
+            <FaPhone />
+            Whatsapp Me
+          </Link>
+        </div>
       </div>
     </footer>
   );

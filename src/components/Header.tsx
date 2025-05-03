@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Title from "./common/Title";
 import { Spotlight } from "./ui/Spotlight";
 import { Meteors } from "./ui/Meteors";
