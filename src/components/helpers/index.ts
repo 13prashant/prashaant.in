@@ -169,3 +169,21 @@ export const projects = [
     themeColor: "#0a5ff9",
   },
 ];
+
+export const startups = [
+  {
+    id: 0,
+    name: "Savvy Pet Spa",
+    logo: "/assets/startups/savvy-pet-spa.svg",
+  },
+  {
+    id: 1,
+    name: "Blinkord",
+    logo: "/assets/startups/blinkord.png",
+  },
+  {
+    id: 2,
+    name: "StackOs",
+    logo: "/assets/startups/stackos.avif",
+  },
+];

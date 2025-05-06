@@ -7,7 +7,8 @@ export default function Footer() {
     <footer>
       <div className="pra-container">
         <h2 className="text-xl md:text-2xl text-pra-accent font-extrabold duration-300 mb-8">
-          Have something in mind? I’d love to hear it.
+          Have something in mind? <br />
+          I&apos;d love to hear it.
         </h2>
         <div className="flex flex-col gap-2">
           <Link
