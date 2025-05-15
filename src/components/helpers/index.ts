@@ -184,6 +184,6 @@ export const startups = [
   {
     id: 2,
     name: "StackOs",
-    logo: "/assets/startups/stackos.avif",
+    logo: "/assets/startups/stack-ai.svg",
   },
 ];

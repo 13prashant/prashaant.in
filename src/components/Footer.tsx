@@ -6,10 +6,10 @@ export default function Footer() {
   return (
     <footer>
       <div className="pra-container">
-        <h2 className="text-xl md:text-2xl text-pra-accent font-extrabold duration-300 mb-8">
-          Have something in mind? <br />
-          I&apos;d love to hear it.
-        </h2>
+        <div className="text-xl md:text-2xl font-extrabold duration-300 mb-8 w-fit">
+          <h2 className="bg-pra-accent">Have something in mind?</h2>
+          <h2 className="text-pra-accent">I&apos;d love to hear it.</h2>
+        </div>
         <div className="flex flex-col gap-2">
           <Link
             href={MEETING_LINK}
