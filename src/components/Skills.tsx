@@ -2,7 +2,6 @@ import Image from "next/image";
 import Title from "./common/Title";
 import { programmingSkills, developmentTools } from "./helpers";
 import { Tooltip } from "./ui/Tooltip";
-import SocialLinks from "./common/SocialLinks";
 
 interface Skill {
   name: string;
@@ -20,7 +19,6 @@ function Skill({ name, image }: Skill) {
 export default function Skills() {
   return (
     <section className="bg-pra-main-500">
-      <SocialLinks className="md:hidden justify-end  pra-container pt-5 pb-0 -mb-11" />
       <div className="pra-container">
         <Title text="SKILLS" />
 
