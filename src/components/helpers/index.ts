@@ -183,7 +183,7 @@ export const startups = [
   },
   {
     id: 2,
-    name: "StackOs",
+    name: "StackAi",
     logo: "/assets/startups/stack-ai.svg",
   },
 ];

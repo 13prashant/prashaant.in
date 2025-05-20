@@ -26,7 +26,11 @@ export default function Hero() {
           <div className="w-fit">
             <Link href={MEETING_LINK} target="_blank">
               <p className="text-pra-text-500 text-lg mt-10 underline hover:text-pra-accent duration-300 selection:text-pra-text-400">
-                Let&apos;s build something impactful together!
+                Let&apos;s{" "}
+                <span className="text-pra-accent">
+                  build something impactful
+                </span>{" "}
+                together!
               </p>
             </Link>
           </div>
