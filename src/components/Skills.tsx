@@ -20,7 +20,7 @@ export default function Skills() {
   return (
     <section className="bg-pra-main-500">
       <div className="pra-container">
-        <Title text="SKILLS" />
+        <Title text="Skills" />
 
         <h4 className="text-pra-text-400 font-semibold text-lg mt-10 mb-5">
           Programming & Web Development
