@@ -12,9 +12,6 @@ export default function Header() {
           <h2 className="text-xl md:text-2xl text-pra-text-400 font-extrabold duration-300">
             hi,👋 I'm Prashant,
           </h2>
-          <p className="text-white text-sm mt-2 font-semibold">
-            speaking Gujarati, Hindi, English, Javascript
-          </p>
         </div>
         <SocialLinks className="hidden md:flex" />
         <Spotlight className="top-0 left-0" fill="steelblue" />

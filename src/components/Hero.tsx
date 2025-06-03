@@ -9,28 +9,25 @@ export default function Hero() {
       <div className="pra-container">
         <div className="selection:bg-pra-accent">
           <h1 className="max-w-90 text-6xl text-pra-text-400 font-semibold mb-5 md:mb-10 duration-300">
-            & building things for{" "}
+            helping founders & teams{" "}
             <span className="text-pra-accent selection:bg-pra-text-400">
-              web
+              launch fast
             </span>
             .
           </h1>
-          <p className="text-pra-text-500 text-lg selection:text-pra-text-400">
-            I help businesses and individuals create powerful, efficient, and
-            scalable web applications. <br /> From robust backend systems to
-            seamless, user-friendly interfaces, I handle every aspect of web
-            development. <br /> By collaborating with me, you'll get a
-            high-quality, tailored solution designed to meet your goals and grow
-            with your business.
-          </p>
+          <>
+            <p className="text-pra-text-500 text-lg selection:text-pra-text-400">
+              I turn ideas into reliable, production-ready web apps — from
+              backend systems to polished frontends.
+            </p>
+            <p className="text-pra-text-400 text-lg selection:text-pra-text-400">
+              Looking for a tech partner you can count on?
+            </p>
+          </>
           <div className="w-fit">
             <Link href={MEETING_LINK} target="_blank">
-              <p className="text-pra-text-500 text-lg mt-10 underline hover:text-pra-accent duration-300 selection:text-pra-text-400">
-                Let&apos;s{" "}
-                <span className="text-pra-accent">
-                  build something impactful
-                </span>{" "}
-                together!
+              <p className="text-pra-accent text-lg mt-10 underline duration-300 selection:text-pra-text-400">
+                Let's talk
               </p>
             </Link>
           </div>
