@@ -7,7 +7,13 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-pra-main-500">
+    <footer className="relative bg-pra-main-500">
+      <div className="absolute -top-8 left-8 md:left-20 flex h-8 items-end overflow-hidden duration-300">
+        <div className="flex -mb-px h-[2px] md:h-[2.5px] w-40 md:w-96 -scale-x-100 duration-300">
+          <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(4,13,33,0)_0%,#040d21_32.29%,rgba(91,203,139,0.3)_67.19%,rgba(91,203,139,0)_100%)]"></div>
+          <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(4,13,33,0)_0%,#040d21_32.29%,rgba(91,203,139,0.3)_67.19%,rgba(91,203,139,0)_100%)]"></div>
+        </div>
+      </div>
       <div className="pra-container">
         <div className="text-xl md:text-2xl font-extrabold duration-300 mb-8 w-fit">
           <motion.h2
