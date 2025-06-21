@@ -24,7 +24,7 @@ export default function WorkedWith() {
           ))}
         </div>
 
-        <p className="text-pra-text-500 text-lg selection:text-pra-text-400 selection:bg-pra-accent mt-10 duration-200">
+        <p className="text-pra-text-500 text-lg selection:text-pra-text-400 selection:bg-pra-accent mt-10 duration-300">
           From solo founders to fast-moving startups, I&apos;ve helped teams
           launch MVPs, scale products, and ship with confidence.
         </p>

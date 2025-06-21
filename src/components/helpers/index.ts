@@ -187,3 +187,29 @@ export const startups = [
     logo: "/assets/startups/stack-ai.svg",
   },
 ];
+
+export const testimonials = [
+  {
+    id: 0,
+    name: "Damjan Dimitrov",
+    designation: "Founder, Blinkord",
+    avatar: "/assets/testimonials/damjan.webp",
+    feedback:
+      "Prashant designed a great landing page, fulfilled all the requirements and even exceeded expectations. Definitely recommend him and would hire again.",
+  },
+  {
+    id: 1,
+    name: "Elijah Hood",
+    designation: "Founder, NobouncEmail",
+    avatar: "/assets/testimonials/elijah.webp",
+    feedback: "Very Satisfied, would recommend.",
+  },
+  {
+    id: 2,
+    name: "Amandeep Singh",
+    designation: "Software Developer",
+    avatar: "/assets/testimonials/amandeep.webp",
+    feedback:
+      "Prashant was fantastic to work with. He delivered high-quality work ahead of schedule. Would definitely collaborate with him again. Highly recommended!",
+  },
+];
