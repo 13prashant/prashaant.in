@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Title from "./common/Title";
 import { programmingSkills, developmentTools } from "./helpers";
 import { Tooltip } from "./ui/Tooltip";
+import { motion } from "framer-motion";
 
 interface Skill {
   name: string;
@@ -24,18 +27,28 @@ export default function Skills() {
       <div className="pra-container">
         <Title text="Skills" />
 
-        <h4 className="text-pra-text-400 font-semibold text-lg mt-10 mb-5">
+        <motion.h4
+          initial={{ filter: "blur(10px)" }}
+          whileInView={{ filter: "blur(0px)" }}
+          transition={{ duration: 0.6, ease: "linear" }}
+          className="text-pra-text-400 font-semibold text-lg mt-10 mb-5"
+        >
           Programming & Web Development
-        </h4>
+        </motion.h4>
         <div className="flex gap-5 flex-wrap">
           {programmingSkills.map((skill) => (
             <Skill key={skill.id} name={skill.name} image={skill.image} />
           ))}
         </div>
 
-        <h4 className="text-pra-text-400 font-semibold text-lg mt-16 mb-5">
+        <motion.h4
+          initial={{ filter: "blur(10px)" }}
+          whileInView={{ filter: "blur(0px)" }}
+          transition={{ duration: 0.6, ease: "linear" }}
+          className="text-pra-text-400 font-semibold text-lg mt-16 mb-5"
+        >
           Development Tools
-        </h4>
+        </motion.h4>
         <div className="flex gap-5 flex-wrap">
           {developmentTools.map((skill) => (
             <Skill key={skill.id} name={skill.name} image={skill.image} />
