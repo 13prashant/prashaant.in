@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { socialAccounts } from "../helpers";
 import { cn } from "@/utils/cn";
 
@@ -17,8 +20,14 @@ export default function SocialLinks({ className }: { className?: string }) {
     <ul
       className={cn("flex items-end gap-5 md:gap-10 duration-300", className)}
     >
-      {socialAccounts.map((account) => (
-        <li key={account.id}>
+      {socialAccounts.map((account, idx) => (
+        <motion.li
+          initial={{ filter: "blur(10px)" }}
+          whileInView={{ filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 + idx * 0.1, ease: "linear" }}
+          key={account.id}
+        >
           <Link
             className="md:text-2xl text-pra-text-400 hover:text-pra-accent duration-300"
             href={account.link}
@@ -28,7 +37,7 @@ export default function SocialLinks({ className }: { className?: string }) {
           >
             {socialIcons[account.name.toLowerCase()]}
           </Link>
-        </li>
+        </motion.li>
       ))}
     </ul>
   );

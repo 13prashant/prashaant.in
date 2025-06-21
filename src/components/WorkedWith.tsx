@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Title from "./common/Title";
 import { startups } from "./helpers";
+import { motion } from "framer-motion";
 
 export default function WorkedWith() {
   return (
@@ -9,8 +12,12 @@ export default function WorkedWith() {
         <Title text="Trusted by Teams like" />
 
         <div className="flex flex-wrap gap-5">
-          {startups.map((startup) => (
-            <div
+          {startups.map((startup, idx) => (
+            <motion.div
+              initial={{ filter: "blur(10px)" }}
+              whileInView={{ filter: "blur(0px)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 + idx * 0.1, ease: "linear" }}
               key={startup.id}
               className="py-5 pl-0 pr-10 grid place-items-center hover:scale-105 duration-300"
             >
@@ -20,7 +27,7 @@ export default function WorkedWith() {
                 height={200}
                 alt={startup.name}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
 

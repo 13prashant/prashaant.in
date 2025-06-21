@@ -13,6 +13,7 @@ export default function Footer() {
           <motion.h2
             initial={{ filter: "blur(10px)" }}
             whileInView={{ filter: "blur(0px)" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="bg-pra-accent"
           >
@@ -21,6 +22,7 @@ export default function Footer() {
           <motion.h2
             initial={{ filter: "blur(10px)" }}
             whileInView={{ filter: "blur(0px)" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "linear" }}
             className="text-pra-accent"
           >

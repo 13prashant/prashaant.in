@@ -13,6 +13,7 @@ export default function Title({ text, className }: Props) {
     <motion.h3
       initial={{ filter: "blur(10px)" }}
       whileInView={{ filter: "blur(0px)" }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className={cn(
         "bg-pra-accent font-bold w-fit mb-5 md:mb-10 duration-300",

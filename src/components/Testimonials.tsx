@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { testimonials } from "./helpers";
+import { motion } from "framer-motion";
 
 export default function Testimonials() {
   return (
@@ -14,8 +17,12 @@ export default function Testimonials() {
           pauseOnHover
         >
           <div className="flex">
-            {testimonials.map((testimonial) => (
-              <div
+            {testimonials.map((testimonial, idx) => (
+              <motion.div
+                initial={{ filter: "blur(10px)" }}
+                whileInView={{ filter: "blur(0px)" }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 + idx * 0.1, ease: "linear" }}
                 key={testimonial.id}
                 className="mx-5 w-full max-w-56 md:max-w-80 bg-pra-main-500 border border-dashed border-pra-accent/30 flex flex-col justify-between hover:border-pra-accent/50 duration-300"
               >
@@ -40,7 +47,7 @@ export default function Testimonials() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </Marquee>

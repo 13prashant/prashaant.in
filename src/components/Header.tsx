@@ -14,7 +14,8 @@ export default function Header() {
           <Title text="Full-Stack Engineer" />
           <motion.h2
             initial={{ filter: "blur(10px)" }}
-            whileInView={{ filter: "blur(0px)" }}
+            animate={{ filter: "blur(0px)" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "linear" }}
             className="text-xl md:text-2xl text-pra-text-400 font-extrabold duration-300"
           >
