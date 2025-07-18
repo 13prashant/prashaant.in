@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { testimonials } from "./helpers";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function Testimonials() {
   return (

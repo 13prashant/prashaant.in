@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { MEETING_LINK, WHATSAPP_LINK } from "@/utils/constants";
 import { FaCalendar, FaPhone } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function Footer() {
   return (

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Title from "./common/Title";
 import { startups } from "./helpers";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function WorkedWith() {
   return (

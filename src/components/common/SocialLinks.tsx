@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { socialAccounts } from "../helpers";
 import { cn } from "@/utils/cn";
 

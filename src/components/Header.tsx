@@ -4,7 +4,7 @@ import Title from "./common/Title";
 import { Spotlight } from "./ui/Spotlight";
 import { Meteors } from "./ui/Meteors";
 import SocialLinks from "./common/SocialLinks";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function Header() {
   return (
