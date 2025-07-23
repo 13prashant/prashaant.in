@@ -20,6 +20,7 @@ export default function WorkedWith() {
               {...getBlurAnimationProps({ index: idx, duration: 0.6 })}
             >
               <Image
+                className="size-auto"
                 src={startup.logo}
                 width={200}
                 height={200}
