@@ -5,6 +5,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { motion } from "motion/react";
 import { socialAccounts } from "../helpers";
 import { cn } from "@/utils/cn";
+import { getBlurAnimationProps } from "../helpers/getBlurAnimationProps";
 
 interface SocialIcons {
   [key: string]: React.ReactElement;
@@ -22,11 +23,8 @@ export default function SocialLinks({ className }: { className?: string }) {
     >
       {socialAccounts.map((account, idx) => (
         <motion.li
-          initial={{ filter: "blur(10px)" }}
-          whileInView={{ filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 + idx * 0.1, ease: "linear" }}
           key={account.id}
+          {...getBlurAnimationProps({ index: idx, duration: 0.6 })}
         >
           <Link
             className="md:text-2xl text-pra-text-400 hover:text-pra-accent duration-300"

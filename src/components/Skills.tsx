@@ -5,6 +5,7 @@ import Title from "./common/Title";
 import { programmingSkills, developmentTools } from "./helpers";
 import { Tooltip } from "./ui/Tooltip";
 import { motion } from "motion/react";
+import { getBlurAnimationProps } from "./helpers/getBlurAnimationProps";
 
 interface Skill {
   name: string;
@@ -28,22 +29,16 @@ export default function Skills() {
         <Title text="Skills" />
 
         <motion.h4
-          initial={{ filter: "blur(10px)" }}
-          whileInView={{ filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "linear" }}
           className="text-pra-text-400 font-semibold text-lg mt-10 mb-5"
+          {...getBlurAnimationProps({ duration: 0.6 })}
         >
           Programming & Web Development
         </motion.h4>
         <div className="flex gap-5 flex-wrap">
           {programmingSkills.map((skill, idx) => (
             <motion.div
-              initial={{ filter: "blur(10px)" }}
-              whileInView={{ filter: "blur(0px)" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 + idx * 0.1, ease: "linear" }}
               key={skill.id}
+              {...getBlurAnimationProps({ index: idx, duration: 0.6 })}
             >
               <Skill name={skill.name} image={skill.image} />
             </motion.div>
@@ -51,22 +46,16 @@ export default function Skills() {
         </div>
 
         <motion.h4
-          initial={{ filter: "blur(10px)" }}
-          whileInView={{ filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "linear" }}
           className="text-pra-text-400 font-semibold text-lg mt-16 mb-5"
+          {...getBlurAnimationProps({ duration: 0.6 })}
         >
           Development Tools
         </motion.h4>
         <div className="flex gap-5 flex-wrap">
           {developmentTools.map((skill, idx) => (
             <motion.div
-              initial={{ filter: "blur(10px)" }}
-              whileInView={{ filter: "blur(0px)" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 + idx * 0.1, ease: "linear" }}
               key={skill.id}
+              {...getBlurAnimationProps({ index: idx, duration: 0.6 })}
             >
               <Skill name={skill.name} image={skill.image} />
             </motion.div>

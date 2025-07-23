@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MEETING_LINK, WHATSAPP_LINK } from "@/utils/constants";
 import { FaCalendar, FaPhone } from "react-icons/fa";
 import { motion } from "motion/react";
+import { getBlurAnimationProps } from "./helpers/getBlurAnimationProps";
 
 export default function Footer() {
   return (
@@ -17,20 +18,14 @@ export default function Footer() {
       <div className="pra-container">
         <div className="text-xl md:text-2xl font-extrabold duration-300 mb-8 w-fit">
           <motion.h2
-            initial={{ filter: "blur(10px)" }}
-            whileInView={{ filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
             className="bg-pra-accent"
+            {...getBlurAnimationProps({ duration: 0.4 })}
           >
             Have something in mind?
           </motion.h2>
           <motion.h2
-            initial={{ filter: "blur(10px)" }}
-            whileInView={{ filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "linear" }}
             className="text-pra-accent"
+            {...getBlurAnimationProps({ duration: 0.6 })}
           >
             I&apos;d love to hear it.
           </motion.h2>

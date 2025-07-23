@@ -5,6 +5,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { Meteors } from "./ui/Meteors";
 import SocialLinks from "./common/SocialLinks";
 import { motion } from "motion/react";
+import { getBlurAnimationProps } from "./helpers/getBlurAnimationProps";
 
 export default function Header() {
   return (
@@ -13,11 +14,8 @@ export default function Header() {
         <div>
           <Title text="Full-Stack Engineer" />
           <motion.h2
-            initial={{ filter: "blur(10px)" }}
-            animate={{ filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "linear" }}
             className="text-xl md:text-2xl text-pra-text-400 font-extrabold duration-300"
+            {...getBlurAnimationProps({ duration: 0.6 })}
           >
             hi,👋 I'm Prashant,
           </motion.h2>
