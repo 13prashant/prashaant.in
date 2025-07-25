@@ -16,14 +16,7 @@ function Skill({ name, image }: Skill) {
   return (
     <Tooltip text={name}>
       <div className="size-16 grid place-items-center">
-        <Image
-          className="size-auto"
-          src={image}
-          width={60}
-          height={60}
-          alt={name}
-          title={name}
-        />
+        <Image src={image} width={60} height={60} alt={name} title={name} />
       </div>
     </Tooltip>
   );
