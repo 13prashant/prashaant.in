@@ -7,7 +7,7 @@ export const getBlurAnimationProps = ({
 }: {
   index?: number;
   duration?: number;
-}): HTMLMotionProps<"div"> => {
+}): any => {
   // Early return for server-side rendering
   if (typeof window === "undefined" || typeof navigator === "undefined") {
     return {};
