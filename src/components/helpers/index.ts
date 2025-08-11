@@ -174,7 +174,7 @@ export const startups = [
   {
     id: 0,
     name: "Savvy Pet Spa",
-    logo: "/assets/startups/savvy-pet-spa.svg",
+    logo: "/assets/startups/savvy-pet-spa.webp",
   },
   {
     id: 1,
