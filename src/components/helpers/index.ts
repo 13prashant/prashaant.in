@@ -174,17 +174,20 @@ export const startups = [
   {
     id: 0,
     name: "Savvy Pet Spa",
-    logo: "/assets/startups/savvy-pet-spa.webp",
+    logo: "/assets/startups/savvy-pet-spa.svg",
+    link: "https://savvy.pet/",
   },
   {
     id: 1,
     name: "Blinkord",
     logo: "/assets/startups/blinkord.png",
+    link: "https://blinkord.com/",
   },
   {
     id: 2,
     name: "StackAi",
     logo: "/assets/startups/stack-ai.svg",
+    link: "https://stackai.xyz/",
   },
 ];
 
