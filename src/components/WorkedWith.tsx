@@ -7,8 +7,12 @@ import { motion } from "motion/react";
 import { getBlurAnimationProps } from "./helpers/getBlurAnimationProps";
 import Link from "next/link";
 import { MEETING_LINK } from "@/utils/constants";
+import { useState } from "react";
+import { cn } from "@/utils/cn";
 
 export default function WorkedWith() {
+  const [yoursCardHovered, setYoursCardHovered] = useState(false);
+
   return (
     <section className="bg-pra-main-400">
       <div className="pra-container">
@@ -18,16 +22,38 @@ export default function WorkedWith() {
           <Link
             href={MEETING_LINK}
             target="_blank"
-            className="text-pra-text-400 place-items-center text-lg p-16 md:p-20 md:border-r-[0.5px] border-b-[0.5px] border-pra-text-400/20 hover:bg-pra-main-400/50 duration-300"
+            className={cn(
+              "text-pra-text-400 place-items-center text-lg bg-pra-universe p-16 md:p-20 md:border-r-[0.5px] border-b-[0.5px] border-pra-text-400/20 duration-300",
+              {
+                "md:col-span-3": yoursCardHovered,
+              }
+            )}
+            onMouseEnter={() => setYoursCardHovered(true)}
+            onMouseLeave={() => setYoursCardHovered(false)}
           >
-            <motion.div {...getBlurAnimationProps({ index: 0, duration: 0.6 })}>
-              Yours?
+            <motion.div
+              className="flex flex-row duration-300 items-center gap-4"
+              {...getBlurAnimationProps({ index: 0, duration: 0.6 })}
+            >
+              Yours?{" "}
+              <span
+                className={cn("text-pra-text-500 duration-300 hidden", {
+                  "md:block": yoursCardHovered,
+                })}
+              >
+                Let&apos;s talk!
+              </span>
             </motion.div>
           </Link>
           <Link
             href={startups[0]?.link}
             target="_blank"
-            className="p-16 md:p-20 place-items-center duration-300 md:col-span-3 border-b-[0.5px] border-pra-text-400/20 z-50 relative bg-[url('/assets/startups/savvy-pet-spa-bg.webp')] hover:bg-pra-main-400/50 bg-cover bg-center"
+            className={cn(
+              "p-16 md:p-20 place-items-center duration-300 border-b-[0.5px] border-pra-text-400/20 z-50 relative bg-[url('/assets/startups/savvy-pet-spa-bg.webp')] hover:bg-pra-main-400/50 bg-cover bg-center",
+              {
+                "md:col-span-3": !yoursCardHovered,
+              }
+            )}
           >
             <motion.div {...getBlurAnimationProps({ index: 0, duration: 0.6 })}>
               <Image
