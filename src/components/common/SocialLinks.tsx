@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { motion } from "motion/react";
 import { socialAccounts } from "../helpers";
 import { cn } from "@/utils/cn";
@@ -12,6 +12,7 @@ interface SocialIcons {
 }
 
 const socialIcons: SocialIcons = {
+  twitter: <FaTwitter className="text-2xl" />,
   linkedin: <FaLinkedin className="text-2xl" />,
   github: <FaGithub className="text-2xl" />,
 };

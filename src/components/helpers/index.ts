@@ -1,4 +1,4 @@
-import { GITHUB_LINK, LINKEDIN_LINK } from "@/utils/constants";
+import { GITHUB_LINK, LINKEDIN_LINK, TWITTER_LINK } from "@/utils/constants";
 
 export const programmingSkills = [
   {
@@ -89,11 +89,16 @@ export const developmentTools = [
 export const socialAccounts = [
   {
     id: 0,
+    name: "Twitter",
+    link: TWITTER_LINK,
+  },
+  {
+    id: 1,
     name: "Linkedin",
     link: LINKEDIN_LINK,
   },
   {
-    id: 1,
+    id: 2,
     name: "Github",
     link: GITHUB_LINK,
   },
