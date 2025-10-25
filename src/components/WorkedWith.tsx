@@ -55,13 +55,21 @@ export default function WorkedWith() {
               }
             )}
           >
-            <motion.div {...getBlurAnimationProps({ index: 0, duration: 0.6 })}>
+            <motion.div
+              {...getBlurAnimationProps({ index: 0, duration: 0.6 })}
+              className="relative"
+            >
               <Image
                 src={startups[0]?.logo}
                 width={200}
                 height={200}
                 alt={startups[0]?.name}
               />
+              {/* In Progress Badge */}
+              <div className="bg-green-900 px-1.5 py-1 hidden md:flex items-center border border-green-700  absolute top-2 right-2 md:-top-3 md:-right-6 rotate-12 gap-1">
+                <span className="size-1.5 bg-green-400 block animate-pulse"></span>
+                <span className="text-[8px] text-white">In Progress</span>
+              </div>
             </motion.div>
           </Link>
           <Link
