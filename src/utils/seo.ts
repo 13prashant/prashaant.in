@@ -46,7 +46,7 @@ export const seoMetadata: Metadata = {
     title: "PRASHANT PATEL",
     description,
     type: "website",
-    images: ["/assets/og-image.jpg"],
+    images: ["/assets/og-image.png"],
   },
   category: "Software Engineering",
 };
