@@ -7,71 +7,54 @@ import { motion } from "motion/react";
 import { getBlurAnimationProps } from "./helpers/getBlurAnimationProps";
 import Link from "next/link";
 import { MEETING_LINK } from "@/utils/constants";
-import { useState } from "react";
-import { cn } from "@/utils/cn";
 
 export default function WorkedWith() {
-  const [yoursCardHovered, setYoursCardHovered] = useState(false);
-
   return (
     <section className="bg-pra-main-400">
       <div className="pra-container">
         <Title text="Trusted by Teams like" />
 
         <div className="grid grid-cols-1 md:grid-cols-4 overflow-hidden bg-pra-main-500">
-          <Link
-            href={MEETING_LINK}
-            target="_blank"
-            className={cn(
-              "text-pra-text-400 place-items-center text-lg bg-pra-universe p-16 md:p-20 md:border-r-[0.5px] border-b-[0.5px] border-pra-text-400/20 duration-300",
-              {
-                "md:col-span-3": yoursCardHovered,
-              }
-            )}
-            onMouseEnter={() => setYoursCardHovered(true)}
-            onMouseLeave={() => setYoursCardHovered(false)}
-          >
-            <motion.div
-              className="flex flex-row duration-300 items-center gap-4"
-              {...getBlurAnimationProps({ index: 0, duration: 0.6 })}
+          <div className="grid grid-cols-1 md:col-span-4 md:grid-cols-4 md:items-stretch">
+            <Link
+              href={MEETING_LINK}
+              target="_blank"
+              className="group/yours peer/yours flex h-full min-h-full items-center justify-center text-pra-text-400 text-lg bg-pra-universe p-16 md:p-20 md:border-r-[0.5px] border-b-[0.5px] border-pra-text-400/20 duration-300 md:hover:col-span-3"
             >
-              Yours?{" "}
-              <span
-                className={cn("text-pra-text-500 duration-300 hidden", {
-                  "md:block": yoursCardHovered,
-                })}
+              <motion.div
+                className="flex flex-row duration-300 items-center gap-4"
+                {...getBlurAnimationProps({ index: 0, duration: 0.6 })}
               >
-                Let&apos;s talk!
-              </span>
-            </motion.div>
-          </Link>
-          <Link
-            href={startups[0]?.link}
-            target="_blank"
-            className={cn(
-              "p-16 md:p-20 place-items-center duration-300 border-b-[0.5px] border-pra-text-400/20 z-50 relative bg-[url('/assets/startups/savvy-pet-spa-bg.webp')] hover:bg-pra-main-400/50 bg-cover bg-center",
-              {
-                "md:col-span-3": !yoursCardHovered,
-              }
-            )}
-          >
-            <motion.div
-              {...getBlurAnimationProps({ index: 0, duration: 0.6 })}
-              className="relative"
+                Yours?{" "}
+                <span className="text-pra-text-500 duration-300 hidden md:group-hover/yours:inline">
+                  Let&apos;s talk!
+                </span>
+              </motion.div>
+            </Link>
+            <Link
+              href={startups[0]?.link}
+              target="_blank"
+              className="flex h-full min-h-full items-center justify-center p-16 md:p-20 duration-300 border-b-[0.5px] border-pra-text-400/20 z-50 relative bg-[url('/assets/startups/savvy-pet-spa-bg.webp')] hover:bg-pra-main-400/50 bg-cover bg-center md:col-span-3 md:peer-hover/yours:col-span-1"
             >
-              <Image
-                src={startups[0]?.logo}
-                width={200}
-                height={200}
-                alt={startups[0]?.name}
-              />
-              {/* In Progress Badge */}
-              <div className="bg-green-900 px-1.5 py-1 hidden md:flex items-center border border-green-700  absolute top-2 right-2 md:-top-3 md:-right-6 rotate-12 gap-1">
-                <span className="size-1.5 bg-green-400 block animate-pulse"></span>
-                <span className="text-[8px] text-white">In Progress</span>
-              </div>
-            </motion.div>
-          </Link>
+              <motion.div
+                {...getBlurAnimationProps({ index: 0, duration: 0.6 })}
+                className="relative flex h-[2.18rem] items-center justify-center"
+              >
+                <Image
+                  src={startups[0]?.logo}
+                  width={200}
+                  height={200}
+                  alt={startups[0]?.name}
+                  className="h-full w-auto max-w-none object-contain"
+                />
+                {/* In Progress Badge */}
+                <div className="bg-green-900 px-1.5 py-1 hidden md:flex items-center border border-green-700  absolute top-2 right-2 md:-top-3 md:-right-6 rotate-12 gap-1">
+                  <span className="size-1.5 bg-green-400 block animate-pulse"></span>
+                  <span className="text-[8px] text-white">In Progress</span>
+                </div>
+              </motion.div>
+            </Link>
+          </div>
           <Link
             href={startups[1]?.link}
             target="_blank"
