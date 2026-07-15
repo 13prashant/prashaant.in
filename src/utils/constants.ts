@@ -1,6 +1,6 @@
 export const EMAIL_ADDRESS = "pacific1392@gmail.com";
 export const PHONE_NUMBER = "+918000432174";
-export const MEETING_LINK = "https://timesync.novocall.co/prashant/meeting";
+export const MEETING_LINK = "https://calendar.app.google/fe5cdwBncNpjfrYJ6";
 export const WHATSAPP_LINK = `https://wa.me/${PHONE_NUMBER}`;
 
 export const TWITTER_LINK = "https://x.com/13Prashaant";
