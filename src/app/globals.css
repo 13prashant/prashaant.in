@@ -8,7 +8,154 @@ body {
 
 @layer components {
   .pra-container {
-    @apply container max-w-[95%] md:max-w-6xl mx-auto px-6 md:px-14 py-20  duration-300;
+    @apply container max-w-[95%] md:max-w-6xl mx-auto px-6 md:px-14 py-20;
+  }
+
+  .hover-accent {
+    transition: color 150ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .hover-border-accent {
+    transition: border-color 150ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .skill-tooltip {
+    opacity: 0;
+    transform: scale(0.95);
+    transform-origin: bottom center;
+    pointer-events: none;
+    transition:
+      opacity 150ms cubic-bezier(0.19, 1, 0.22, 1),
+      transform 150ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .project-arrow,
+  .project-badge {
+    transition: transform 150ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .project-description {
+    opacity: 0;
+    transition: opacity 150ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .hit-target {
+    position: relative;
+  }
+
+  .hit-target::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: max(100%, 44px);
+    height: max(100%, 44px);
+    transform: translate(-50%, -50%);
+  }
+
+  /* One entrance for the whole block. Hidden only after JS marks it pending. */
+  @media (prefers-reduced-motion: no-preference) {
+    .worked-with-reveal[data-reveal="pending"] {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    .worked-with-reveal[data-reveal="in"] {
+      opacity: 1;
+      transform: translateY(0);
+      transition:
+        opacity 300ms cubic-bezier(0.19, 1, 0.22, 1),
+        transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+}
+
+@keyframes spotlight-in {
+  from {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+.animate-spotlight {
+  animation: spotlight-in 2s ease 0.75s forwards;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover-accent:hover {
+    color: #5bcb8b;
+  }
+
+  .hover-border-accent:hover {
+    border-color: rgb(91 203 139 / 0.5);
+  }
+
+  .group\/skill:hover .skill-tooltip {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .group:hover .project-description {
+    opacity: 1;
+  }
+}
+
+.group:focus-within .project-description {
+  opacity: 1;
+}
+
+.quotes-static {
+  display: none;
+  overflow-x: auto;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .group\/arrow:hover .project-arrow {
+    transform: scale(1.02);
+  }
+
+  .group:hover .project-badge {
+    transform: translateY(-0.75rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-tooltip {
+    transform: none;
+    transition: opacity 150ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .group\/skill:hover .skill-tooltip {
+    transform: none;
+  }
+
+  .animate-spotlight {
+    animation: none;
+    opacity: 1;
+    transform: translate(-50%, -40%);
+  }
+
+  .animate-meteor-effect {
+    animation: none;
+    opacity: 0;
+  }
+
+  .quotes-motion {
+    display: none;
+  }
+
+  .quotes-static {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .group\/arrow:active .project-arrow {
+    transform: scale(0.97);
   }
 }
 

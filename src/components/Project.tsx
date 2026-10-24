@@ -56,9 +56,10 @@ export default function Project({
               target="_blank"
               aria-label={`Visit ${name}`}
               title={`${name} live website`}
+              className="group/arrow grid size-11 place-items-center"
             >
               <AiOutlineArrowRight
-                className="text-3xl hover:scale-125 duration-300"
+                className="project-arrow text-3xl"
                 style={{
                   color: themeColor,
                 }}
@@ -71,13 +72,13 @@ export default function Project({
             style={{
               background: themeColor,
             }}
-            className="text-pra-text-400 px-2 py-1 absolute left-4 -top-4 -z-10 group-hover:-top-7 duration-300"
+            className="project-badge text-pra-text-400 px-2 py-1 absolute left-4 -top-4 -z-10"
           >
             {status}
           </span>
         )}
       </div>
-      <p className="absolute top-1/2 left-3 -translate-y-1/2 bg-pra-accent font-bold px-2 py-1 z-50 hidden group-hover:block duration-300">
+      <p className="project-description pointer-events-none absolute top-1/2 left-3 z-50 -translate-y-1/2 bg-pra-accent px-2 py-1 font-bold">
         {description}
       </p>
     </div>

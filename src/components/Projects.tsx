@@ -6,8 +6,8 @@ export default function Projects() {
   return (
     <section className="bg-pra-main-400">
       <div className="pra-container">
-        <Title text="PROJECTS" className="mb-20 md:mb-20 duration-300" />
-        <div className="flex flex-wrap justify-center lg:justify-start gap-9 duration-300">
+        <Title text="PROJECTS" className="mb-20 md:mb-20" />
+        <div className="flex flex-wrap justify-center lg:justify-start gap-9">
           {projects
             .sort((a, b) => b.id - a.id)
             .map((project) => (

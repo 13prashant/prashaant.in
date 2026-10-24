@@ -3,52 +3,63 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { testimonials } from "./helpers";
-import { motion } from "motion/react";
-import { getBlurAnimationProps } from "./helpers/getBlurAnimationProps";
+
+function TestimonialCard({
+  testimonial,
+}: {
+  testimonial: (typeof testimonials)[number];
+}) {
+  return (
+    <div className="hover-border-accent mx-5 flex w-full max-w-56 shrink-0 flex-col justify-between border border-dashed border-pra-accent/30 bg-pra-main-500 md:max-w-80">
+      <p className="text-balance p-4 text-xs text-pra-text-500 selection:bg-pra-accent selection:text-pra-text-400 md:p-8 md:text-base">
+        {testimonial.feedback}
+      </p>
+
+      <div className="flex items-center border border-dashed border-pra-accent/0 border-t-pra-accent/30 p-4 py-2 md:p-8 md:py-4">
+        <Image
+          src={testimonial.avatar}
+          alt={testimonial.name}
+          className="mr-4 size-8 rounded-full object-cover md:size-12"
+          width={100}
+          height={100}
+        />
+        <div>
+          <h3 className="text-xs font-semibold text-pra-text-400 md:text-base">
+            {testimonial.name}
+          </h3>
+          <p className="text-xs text-pra-text-400/60 md:text-sm">
+            {testimonial.designation}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Testimonials() {
+  const cards = testimonials.map((testimonial) => (
+    <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+  ));
+
   return (
     <section className="bg-pra-main-400">
       <div className="pra-container">
-        <Marquee
-          gradient
-          gradientColor="#2c2d31" // = bg-pra-main-400
-          gradientWidth={40}
-          speed={40}
-          pauseOnHover
-        >
-          <div className="flex">
-            {testimonials.map((testimonial, idx) => (
-              <motion.div
-                key={testimonial.id}
-                className="mx-5 w-full max-w-56 md:max-w-80 bg-pra-main-500 border border-dashed border-pra-accent/30 flex flex-col justify-between hover:border-pra-accent/50 duration-300"
-                {...getBlurAnimationProps({ index: idx, duration: 0.6 })}
-              >
-                <p className="text-xs md:text-base duration-300 text-pra-text-500 p-4 md:p-8 text-balance selection:text-pra-text-400 selection:bg-pra-accent">
-                  {testimonial.feedback}
-                </p>
-
-                <div className="flex items-center p-4 py-2 md:py-4 md:p-8 border border-dashed border-pra-accent/0 border-t-pra-accent/30">
-                  <Image
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="size-8 md:size-12 duration-200 rounded-full mr-4 object-cover"
-                    width={100}
-                    height={100}
-                  />
-                  <div>
-                    <h3 className="text-pra-text-400 font-semibold text-xs md:text-base duration-300">
-                      {testimonial.name}
-                    </h3>
-                    <p className="text-pra-text-400/60 text-xs md:text-sm duration-300">
-                      {testimonial.designation}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </Marquee>
+        <div className="quotes-motion">
+          <Marquee
+            gradient
+            gradientColor="#2c2d31"
+            gradientWidth={40}
+            speed={40}
+            pauseOnHover
+          >
+            <div className="flex">{cards}</div>
+          </Marquee>
+        </div>
+        <div className="quotes-static">
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+          ))}
+        </div>
       </div>
     </section>
   );

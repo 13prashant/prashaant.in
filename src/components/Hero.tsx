@@ -8,7 +8,7 @@ export default function Hero() {
       <SocialLinks className="md:hidden justify-end  pra-container pt-5 pb-0 -mb-11" />
       <div className="pra-container">
         <div className="selection:bg-pra-accent">
-          <h1 className="max-w-90 text-6xl text-pra-text-400 font-semibold mb-5 md:mb-10 duration-300">
+          <h1 className="max-w-90 text-6xl text-pra-text-400 font-semibold mb-5 md:mb-10">
             helping founders & teams{" "}
             <span className="text-pra-accent selection:bg-pra-text-400">
               launch fast
@@ -25,10 +25,12 @@ export default function Hero() {
             </p>
           </>
           <div className="w-fit">
-            <Link href={MEETING_LINK} target="_blank">
-              <p className="text-pra-accent text-lg mt-10 underline duration-300 selection:text-pra-text-400">
-                Let's talk
-              </p>
+            <Link
+              href={MEETING_LINK}
+              target="_blank"
+              className="hit-target hover-accent mt-10 inline-block text-lg text-pra-accent underline selection:text-pra-text-400"
+            >
+              Let's talk
             </Link>
           </div>
         </div>
